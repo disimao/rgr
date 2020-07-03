@@ -30,6 +30,7 @@ class Command(BaseRunSpiderCommand):
             'ROBOTSTXT_OBEY': True,
             'BOT_NAME': 'rgr',
             'HTTPERROR_ALLOWED_CODES': [code.value for code in HTTPStatus],
+            'CONCURRENT_REQUESTS': 1000,
         })
 
         process.crawl(PhonesSpider)
